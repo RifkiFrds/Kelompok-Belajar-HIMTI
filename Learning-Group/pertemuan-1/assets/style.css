@@ -1,0 +1,12 @@
+h1 {
+    text-align: center;
+    color: blue;
+    font-size: 40px;
+}
+
+img {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
