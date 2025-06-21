@@ -8,18 +8,69 @@ body {
   font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
   line-height: 1.6;
   background-color: #f4f4f4;
-  color: #333;
+  color: #333333;
   padding: 1rem;
 }
 
-/* Main Header */
-.main-header {
+/* --- Kontainer Umum untuk Section --- */
+.main-header,
+.products {
   background-color: #ffffff;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* --- Navigasi --- */
+.nav-container {
+  width: 100%;
+  max-width: 1200px; 
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 2rem;
+  border-radius: 12px;
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-container ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style-type: none;
+}
+
+.nav-container a {
+  color: #0055a5;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-container a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #d1ac07;
+  transition: width 0.3s ease;
+}
+
+.nav-container a:hover {
+  color: #333333;
+}
+
+.nav-container a:hover::after {
+  width: 100%;
+}
+
+/* --- Main Header --- */
 .header-content {
   display: flex;
   align-items: center;
@@ -33,6 +84,21 @@ body {
   min-width: 250px;
 }
 
+.header-text a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1rem;
+  background-color: #0055a5;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.header-text a:hover {
+  background-color: #d1ac07;
+}
+
 .header-image {
   flex: 1;
   min-width: 200px;
@@ -44,28 +110,9 @@ body {
   height: auto;
 }
 
-.header-text a {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.6rem 1rem;
-  background-color: #0055a5;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background 0.3s ease;
-}
-
-.header-text a:hover {
-  background-color: #d1ac07;
-}
-
-/* Produk dan Layanan */
+/* --- Section Produk (Card) --- */
 .products {
   margin-top: 2rem;
-  background-color: #fff;
-  padding: 2rem 1rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .products h2 {
@@ -86,7 +133,7 @@ body {
   border-radius: 12px;
   flex: 1 1 250px;
   max-width: 300px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -99,18 +146,22 @@ body {
   color: #d1ac07;
 }
 
-/* Footer */
+/* --- Footer --- */
 footer {
   text-align: center;
   margin-top: 3rem;
   padding: 1rem;
   font-size: 0.9rem;
-  color: #666;
+  color: #666666;
 }
 
-/* Responsive */
+
+/* ============================================= */
+/* ===== 3. RESPONSIVE DESIGN (MEDIA QUERIES) ==== */
+/* ============================================= */
+
 @media (max-width: 768px) {
-   .header-content {
+  .header-content {
     flex-direction: column-reverse;
     text-align: center;
   }
@@ -118,6 +169,12 @@ footer {
   .header-text a {
     margin-top: 1.2rem;
   }
+
+  .nav-container ul {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
   .card-list {
     flex-direction: column;
     align-items: center;
@@ -128,4 +185,3 @@ footer {
     padding: 1.5rem 1rem;
   }
 }
-

@@ -1,26 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning Js</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learning JS</title>
+  <!-- Eksternal CSS -->
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
+
 <body>
-    <div class="game-conatiner">
-        <p>Game Gunting Kertas Batu</p>
-    </div>
-    
-    <div class="choises">
-    <button id="gunting">Gunting</button>
-    <button id="kertas">Kertas</button>
-    <button id="batu">Batu</button>
+  <!-- Navigasi -->
+  <div class="nav-container">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Klinik HIMTI</a></li>
+      <li><a href="#">Game HIMTI</a></li>
+    </ul>
+  </div>
+
+  <!-- Konten Utama -->
+  <section class="main-content">
+    <div class="game-container">
+      <p>Game Gunting Kertas Batu</p>
     </div>
 
-     <div class="result-display">
-            <p>Komputer memilih: <span id="computer-choice">-</span></p>
-            <h2 id="result-text">Mulai Permainan!</h2>
-        </div>
+    <div class="choices">
+      <button onclick="playGame('Gunting')">Gunting</button>
+      <button onclick="playGame('Kertas')">Kertas</button>
+      <button onclick="playGame('Batu')">Batu</button>
+    </div>
+
+    <div class="result-display">
+      <p>GhaibTech Memilih: <span id="ghaib-choice">-</span></p>
+      <h2 id="result-text"></h2>
+    </div>
+  </section>
+
+  <!-- Ekternal Script JS-->
+  <script src="script/index.js"></script>
 </body>
-
-<script src="script.js"></script>
 </html>

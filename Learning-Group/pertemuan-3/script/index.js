@@ -1,48 +1,31 @@
-const batuButton = document.getElementById('batu');
-const guntingButton = document.getElementById('gunting');
-const kertasButton = document.getElementById('kertas');
-const computerChoiceDisplay = document.getElementById('computer-choice');
+const ghaibChoiceDisplay = document.getElementById('ghaib-choice');
 const resultText = document.getElementById('result-text');
 
-const choices = ['Batu', 'Gunting', 'Kertas'];
+const choices = ['Gunting', 'Kertas', 'Batu'];
 
-function getComputerChoice() {
+function getGhaibChoice() {
     const randomIndex = Math.floor(Math.random() * choices.length);
     return choices[randomIndex];
 }
 
 function playGame(playerChoice) {
-    const computerChoice = getComputerChoice();
-    
-    computerChoiceDisplay.textContent = computerChoice;
+    const ghaibChoice = getGhaibChoice();
 
-    if (playerChoice === computerChoice) {
-        // Hasil Seri
-        resultText.textContent = 'Hasilnya Seri!';
+    ghaibChoiceDisplay.textContent = ghaibChoice;
+
+    if (playerChoice === ghaibChoice) {
+        resultText.textContent = 'Kamu Seri Dengan GhaibTech!';
         resultText.className = 'draw';
     } else if (
-        (playerChoice === 'Batu' && computerChoice === 'Gunting') ||
-        (playerChoice === 'Gunting' && computerChoice === 'Kertas') ||
-        (playerChoice === 'Kertas' && computerChoice === 'Batu')
+        (playerChoice == 'Gunting' && ghaibChoice == 'Kertas') ||
+        (playerChoice == 'Kertas' && ghaibChoice == 'Batu') ||
+        (playerChoice == 'Batu' && ghaibChoice == 'Gunting')
     ) {
-        // Pemain Menang
-        resultText.textContent = 'Kamu Menang!';
-        resultText.className = 'win';
+        resultText.textContent = 'Kamu Menang Dengan GhaibTech';
+        resultText.className = 'menang';
+
     } else {
-        // Pemain Kalah
-        resultText.textContent = 'Kamu Kalah!';
-        resultText.className = 'lose';
+        resultText.textContent = 'Kamu Kalah Dari GhaibTech';
+        resultText.className = 'kalah'
     }
 }
-
-batuButton.addEventListener('click', () => {
-    playGame('Batu');
-});
-
-guntingButton.addEventListener('click', () => {
-    playGame('Gunting');
-});
-
-kertasButton.addEventListener('click', () => {
-    playGame('Kertas');
-});
