@@ -25,7 +25,7 @@ Repositori ini didedikasikan untuk mendokumentasikan tugas di **Bidang Web Devel
 📌 Konten yang tersedia di repositori ini meliputi:
 - Modul pembelajaran 
 - Tugas individu
-- Kode sumber proyek bersama (mini project / final project)
+- Source Code proyek (mini project / final project)
 - Dokumentasi pertemuan
 
 ---
