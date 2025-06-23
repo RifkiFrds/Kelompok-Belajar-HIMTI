@@ -5,7 +5,7 @@
 Kelompok belajar ini dibagi ke dalam beberapa bidang pengembangan, yaitu:
 
 1. **Web Developer** – Fokus pada pengembangan situs web dengan tech stack React.js
-2. **Android Developer** – Mempelajari pengembangan aplikasi Android menggunakan Flutter/Kotlin.
+2. **Mobile Development** – Mempelajari pengembangan aplikasi Mobile menggunakan Flutter/Kotlin.
 3. **UI/UX Designer** – Mempelajari dasar-dasar desain antarmuka pengguna dan pengalaman pengguna, menggunkan Figma
 4. **Network Engineering** – Fokus pada pemahaman dan pengelolaan jaringan komputer.
 
