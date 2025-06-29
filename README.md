@@ -30,10 +30,4 @@ Repositori ini didedikasikan untuk mendokumentasikan tugas di **Bidang Web Devel
 
 ---
 
-## Kontribusi
-
-Setiap anggota kelompok belajar diharapkan berkontribusi aktif baik dalam pembelajaran maupun dalam pengembangan proyek. Silakan ikuti panduan kontribusi jika ingin menambahkan materi atau memperbarui konten.
-
----
-
 **Thank You**
