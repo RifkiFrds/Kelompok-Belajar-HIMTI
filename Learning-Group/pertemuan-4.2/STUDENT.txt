@@ -1,0 +1,6 @@
+📘 Latihan JavaScript ES6 Pertemuan 4.2
+📚 Kelompok Belajar HIMTI
+
+👤 Name          : Muhamad Rifki Firdaus  
+🆔 NIM           : 24552010142  
+🔗 Documentation : https://github.com/RifkiFrds/Kelompok-Belajar-HIMTI
