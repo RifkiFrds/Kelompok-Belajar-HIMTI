@@ -1,0 +1,166 @@
+.card-container {
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- Base Card & Variable Definition --- */
+
+.glass-card {
+  /* Default Theme: Aurora */
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.15);
+  --text-color: #f0f0f0;
+  --card-shadow: 0 0 20px rgba(173, 216, 230, 0.2);
+  --icon-bg: rgba(255, 255, 255, 0.1);
+  --icon-border: rgba(255, 255, 255, 0.3);
+  --icon-hover-bg: rgba(255, 255, 255, 0.25);
+  --icon-hover-color: white;
+  --btn-bg: rgba(255, 255, 255, 0.1);
+  --btn-border: rgba(255, 255, 255, 0.3);
+  --btn-hover-bg: rgba(255, 255, 255, 0.5);
+
+  /* Structural Styles */
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  color: var(--text-color);
+  
+  max-width: 350px;
+  width: 90%;
+  padding: 32px;
+  margin: auto;
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease-out;
+}
+
+/* --- Theme Overrides --- */
+
+.glass-card.frosted {
+  --card-bg: rgba(255, 255, 255, 0.25);
+  --card-border: rgba(255, 255, 255, 0.2);
+  --text-color: #333;
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  --icon-bg: rgba(255, 255, 255, 0.3);
+  --icon-border: rgba(0, 0, 0, 0.1);
+  --icon-hover-bg: white;
+  --icon-hover-color: black;
+  --btn-bg: rgba(255, 255, 255, 0.3);
+  --btn-border: rgba(0, 0, 0, 0.2);
+  --btn-hover-bg: rgba(200, 200, 200, 0.142);
+}
+
+.glass-card.neon {
+  --card-bg: rgba(0, 0, 0, 0.3);
+  --card-border: #0ff;
+  --text-color: #0ff;
+  --card-shadow: 0 0 15px #0ff, 0 0 30px #0ff;
+  --icon-bg: rgba(0, 255, 255, 0.1);
+  --icon-border: #0ff;
+  --icon-hover-bg: #0ff;
+  --icon-hover-color: black;
+  --btn-bg: rgba(0, 0, 0, 0.4);
+  --btn-border: #0ff;
+  --btn-hover-bg: rgba(0, 255, 255, 0.2);
+}
+
+/* --- Card Elements --- */
+
+.mode-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.glass-img-wrapper {
+  width: 140px;
+  height: 140px;
+  padding: 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.profile-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: none;
+}
+
+.title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.description {
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+}
+
+/* --- Themed Components (Icons & Button) --- */
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 0;
+}
+
+.social-icons i {
+  background: var(--icon-bg);
+  color: var(--text-color);
+  border: 1px solid var(--icon-border);
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.social-icons i:hover {
+  background: var(--icon-hover-bg);
+  color: var(--icon-hover-color);
+}
+
+.btn-download {
+  background: var(--btn-bg);
+  color: var(--text-color);
+  border: 1px solid var(--btn-border);
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+  background: var(--btn-hover-bg);
+}
