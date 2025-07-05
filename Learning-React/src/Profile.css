@@ -5,10 +5,7 @@
   align-items: center;
 }
 
-/* --- Base Card & Variable Definition --- */
-
 .glass-card {
-  /* Default Theme: Aurora */
   --card-bg: rgba(255, 255, 255, 0.05);
   --card-border: rgba(255, 255, 255, 0.15);
   --text-color: #f0f0f0;
@@ -21,7 +18,6 @@
   --btn-border: rgba(255, 255, 255, 0.3);
   --btn-hover-bg: rgba(255, 255, 255, 0.5);
 
-  /* Structural Styles */
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   box-shadow: var(--card-shadow);
@@ -35,6 +31,7 @@
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,8 +40,6 @@
   transform-style: preserve-3d;
   transition: transform 0.2s ease-out;
 }
-
-/* --- Theme Overrides --- */
 
 .glass-card.frosted {
   --card-bg: rgba(255, 255, 255, 0.25);
@@ -74,24 +69,9 @@
   --btn-hover-bg: rgba(0, 255, 255, 0.2);
 }
 
-/* --- Card Elements --- */
-
-.mode-toggle {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: rgba(255, 255, 255, 0.1);
-  border: none;
-  color: white;
-  padding: 6px 10px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
 .glass-img-wrapper {
-  width: 140px;
-  height: 140px;
+  width: 150px;
+  height: 150px;
   padding: 5px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
@@ -106,16 +86,28 @@
 }
 
 .profile-img {
-  width: 130px;
-  height: 130px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
   border: none;
 }
 
+.card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  text-align: center;
+}
+
+.card-header .name, .card-header .title {
+  margin: 0;
+  padding: 0;
+}
+
 .title {
   font-weight: bold;
-  margin: 0;
 }
 
 .description {
@@ -123,8 +115,6 @@
   text-align: center;
   margin: 0;
 }
-
-/* --- Themed Components (Icons & Button) --- */
 
 .social-icons {
   display: flex;
@@ -163,4 +153,89 @@
 
 .btn-download:hover {
   background: var(--btn-hover-bg);
+}
+
+.share-icon {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: var(--icon-bg);
+  color: var(--text-color);
+  border: 1px solid var(--icon-border);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.share-icon:hover {
+  background: var(--icon-hover-bg);
+  color: var(--icon-hover-color);
+  transform: scale(1.1);
+}
+
+.mode-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--icon-bg);
+  border: 1px solid var(--icon-border);
+  color: var(--text-color);
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.mode-toggle:hover {
+  background: var(--icon-hover-bg);
+  color: var(--icon-hover-color);
+}
+
+.theme-switcher {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 6px;
+  border-radius: 20px;
+}
+
+.theme-btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.theme-btn:hover {
+  transform: scale(1.15);
+}
+
+.theme-btn.active {
+  border-color: white;
+}
+
+.theme-btn.aurora { 
+  background-image: linear-gradient(to right, #6a82fb, #fc5c7d); 
+}
+
+.theme-btn.neon { 
+  background: #0ff; 
+}
+
+.theme-btn.frosted { 
+  background: #e0e0e0; 
 }
