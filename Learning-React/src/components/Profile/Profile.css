@@ -82,7 +82,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0;
+  margin-bottom: 0.25rem;
 }
 
 .profile-img {
@@ -97,17 +97,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.25rem;
   text-align: center;
 }
 
-.card-header .name, .card-header .title {
-  margin: 0;
-  padding: 0;
+.card-header h2 {
+  margin-bottom: 0.25rem; 
+  margin-top: 0;
 }
 
-.title {
-  font-weight: bold;
+.card-header .title {
+  margin-top: 0;
+  margin-bottom: 0.10rem; 
+  font-weight: lighter;
 }
 
 .description {
@@ -115,6 +116,7 @@
   text-align: center;
   margin: 0;
 }
+
 
 .social-icons {
   display: flex;
@@ -124,11 +126,9 @@
 }
 
 .social-icons i {
-  background: var(--icon-bg);
   color: var(--text-color);
-  border: 1px solid var(--icon-border);
-  font-size: 20px;
-  padding: 10px;
+  font-size: 30px;
+  padding: 5px;
   border-radius: 10px;
   transition: all 0.3s ease;
   backdrop-filter: blur(12px);
@@ -144,16 +144,22 @@
   background: var(--btn-bg);
   color: var(--text-color);
   border: 1px solid var(--btn-border);
-  padding: 10px 16px;
+  padding: 10px 10px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 15px;
   transition: all 0.3s ease;
 }
 
 .btn-download:hover {
-  background: var(--btn-hover-bg);
+  background: linear-gradient(90deg, #ff6ec7, #00ffff, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+  transition: all 0.3s ease;
 }
+
 
 .share-icon {
   position: absolute;

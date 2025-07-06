@@ -1,19 +1,23 @@
 import { useState, useRef, useEffect } from 'react'; 
-import '../Profile.css';
+import './Profile.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShare, faCheck, faDownload } from '@fortawesome/free-solid-svg-icons'
+
+
 
 const Profile = ({ name, title, description, image, socials, unduh }) => {
   const themes = ['aurora', 'neon', 'frosted'];
   const [themeIndex, setThemeIndex] = useState(0);
   const currentTheme = themes[themeIndex];
   
-  // Ref untuk kartu
+  // useRef Untuk kartu
   const cardRef = useRef(null);
-
   const toggleTheme = () => {
     setThemeIndex((prevIndex) => (prevIndex + 1) % themes.length);
   };
-
-  const [shareIcon, setShareIcon] = useState('fas fa-share-alt');
+  
+  //FontAwesomeIcon
+  const [shareIcon, setShareIcon] = useState(faShare);
 
   // Logika untuk efek tilt
   useEffect(() => {
@@ -63,9 +67,9 @@ const Profile = ({ name, title, description, image, socials, unduh }) => {
       try {
         await navigator.clipboard.writeText(shareData.url);
         
-        setShareIcon('fas fa-check');
+        setShareIcon(faCheck);
         setTimeout(() => {
-          setShareIcon('fas fa-share-alt');
+          setShareIcon(faShare);
         }, 2000);
         
       } catch (err) {
@@ -80,7 +84,7 @@ const Profile = ({ name, title, description, image, socials, unduh }) => {
       <div className={`glass-card ${currentTheme}`} ref={cardRef}>
 
         <a href="#" className="share-icon" onClick={handleShare} aria-label="Copy Profile Link">
-          <i className={shareIcon}></i>
+           <FontAwesomeIcon icon={shareIcon} />
         </a>
 
         <button className="mode-toggle" onClick={toggleTheme}>
@@ -99,18 +103,18 @@ const Profile = ({ name, title, description, image, socials, unduh }) => {
         </div>
 
         <p className="description">{description}</p>
-        
-        <div className="social-icons">
+
+        <a href="/CV-Muhamad-Rifki-Firdaus.pdf" download className="btn-download">
+          <FontAwesomeIcon icon={faDownload} />  {unduh}
+        </a>
+
+         <div className="social-icons">
           {socials.map((social, index) => (
             <a href={social.link} key={index} target="_blank" rel="noreferrer">
-              <i className={social.icon}></i>
+              <i><FontAwesomeIcon icon={social.icon} /></i>
             </a>
           ))}
         </div>
-
-        <a href="/CV-Muhamad-Rifki-Firdaus.pdf" download className="btn-download">
-          <i className="fas fa-download"></i> {unduh}
-        </a>
       </div>
     </div>
   );
