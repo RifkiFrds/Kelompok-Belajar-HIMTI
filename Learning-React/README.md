@@ -1,12 +1,72 @@
-# React + Vite
+# 📘 Pengenalan React JS & JSX
+### 📚 Kelompok Belajar HIMTI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+### 👤 Nama  
+**Muhamad Rifki Firdaus**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🆔 NIM  
+**24552010142**
 
-## Expanding the ESLint configuration
+### 🔗 Dokumentasi  
+[📂 GitHub Repository](https://github.com/RifkiFrds/Kelompok-Belajar-HIMTI)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📦 Project Overview
+
+### 🏷️ Nama Proyek  
+**Profile Card**
+
+### 💻 Deskripsi  
+Proyek ini adalah kartu profil interaktif menggunakan React JS dan JSX. Menampilkan foto, nama, deskripsi, media sosial, serta tombol download CV dengan efek modern UI seperti glassmorphism dan aurora style.
+
+---
+
+## ⚙️ Teknologi dan Dependencies
+
+| Teknologi                              | Keterangan                                      |
+|----------------------------------------|-------------------------------------------------|
+| React JS                               | Library utama pengembangan frontend             |
+| JSX                                    | Penulisan komponen dengan sintaks deklaratif    |
+| Vite                                   | Dev server modern & bundler yang cepat          |
+| @fortawesome/react-fontawesome         | Ikon sosial media dan dekoratif                 |
+| React Hooks (`useState`, `useRef`, `useEffect`) | Logika interaktif dan animasi UI      |
+
+---
+
+## ✨ Fitur Utama
+
+- 🎨 Tampilan responsive dengan efek **glassmorphism** dan **aurora**
+- 🧑‍💻 Data profil dikendalikan melalui `props`
+- 📱 Fitur share link atau copy ke clipboard
+- 📥 Tombol unduh CV dengan efek hover gradien
+- 🌐 Ikon sosial media yang terhubung ke profil online
+
+---
+
+## 📁 Struktur Folder
+
+📦src
+┣ 📂assets
+┣ 📂components
+┃ ┣ 📂Profile
+┃ ┃ ┣ 📄Profile.jsx
+┃ ┃ ┗ 📄Profile.css
+┃ ┣ 📂Header
+┃ ┃ ┣ 📄Header.jsx
+┃ ┃ ┗ 📄Header.css
+┣ 📄App.jsx
+┣ 📄main.jsx
+┣ 📄App.css
+┗ 📄index.css
+
+---
+
+## 🚀 Preview
+> Jalankan lokal:
+```bash
+npm install
+npm run dev
+
