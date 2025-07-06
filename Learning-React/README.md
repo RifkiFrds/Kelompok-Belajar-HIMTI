@@ -1,20 +1,4 @@
-# 📘 Pengenalan React JS & JSX
-### 📚 Kelompok Belajar HIMTI
-
----
-
-### 👤 Nama  
-**Muhamad Rifki Firdaus**
-
-### 🆔 NIM  
-**24552010142**
-
-### 🔗 Dokumentasi  
-[📂 GitHub Repository](https://github.com/RifkiFrds/Kelompok-Belajar-HIMTI)
-
----
-
-## 📦 Project Overview
+# 📦 Project Overview
 
 ### 🏷️ Nama Proyek  
 **Profile Card**
