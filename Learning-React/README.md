@@ -32,19 +32,19 @@ Proyek ini adalah kartu profil interaktif menggunakan React JS dan JSX. Menampil
 
 ## 📁 Struktur Folder
 
-📦src
-┣ 📂assets
-┣ 📂components
-┃ ┣ 📂Profile
-┃ ┃ ┣ 📄Profile.jsx
-┃ ┃ ┗ 📄Profile.css
-┃ ┣ 📂Header
-┃ ┃ ┣ 📄Header.jsx
-┃ ┃ ┗ 📄Header.css
-┣ 📄App.jsx
-┣ 📄main.jsx
-┣ 📄App.css
-┗ 📄index.css
+src/
+├── assets/ # Gambar dan aset statis
+├── components/ # Komponen modular
+│ ├── Header/
+│ │ ├── Header.jsx
+│ │ └── Header.css
+│ └── Profile/
+│ ├── Profile.jsx
+│ └── Profile.css
+├── App.jsx # Komponen utama aplikasi
+├── main.jsx # Entry point React
+├── App.css # Gaya global aplikasi
+└── index.css # Reset & base styling
 
 ---
 
