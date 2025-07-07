@@ -3,8 +3,6 @@ import './Profile.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShare, faCheck, faDownload } from '@fortawesome/free-solid-svg-icons'
 
-
-
 const Profile = ({ name, title, description, image, socials, unduh }) => {
   const themes = ['aurora', 'neon', 'frosted'];
   const [themeIndex, setThemeIndex] = useState(0);
