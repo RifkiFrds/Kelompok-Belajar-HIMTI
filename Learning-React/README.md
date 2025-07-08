@@ -31,7 +31,7 @@ Proyek ini adalah kartu profil interaktif menggunakan React JS dan JSX. Menampil
 ---
 
 ## 📁 Struktur Folder
-
+```
 src/
 ├── assets/ # Gambar dan aset statis
 ├── components/ # Komponen modular
