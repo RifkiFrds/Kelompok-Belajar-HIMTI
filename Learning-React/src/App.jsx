@@ -1,6 +1,7 @@
 import React from 'react';
 import Profile from './components/Profile/Profile'; 
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 import './App.css'; 
 import { faGithub, faInstagram, faLinkedin, faFacebook } from '@fortawesome/free-brands-svg-icons';
@@ -27,6 +28,8 @@ function App() {
         socials={socials}
         unduh="Let’s Collaborate – View My CV"
       />
+
+      <Footer paragraf="&copy;" year="" author="All rights reserved | Muhamad Rifki Firdaus" />
     </div>
   );
 }

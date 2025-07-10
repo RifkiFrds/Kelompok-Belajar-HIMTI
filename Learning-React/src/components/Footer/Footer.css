@@ -1,0 +1,13 @@
+.footer-container {
+          background: linear-gradient(90deg, #c084fc, #ff6ec7, #00ffff);
+          padding: 10px;
+          text-align: center;
+          font-size: 14px;
+          color: white;
+          animation: fadeIn 0.7s ease-in-out;
+          width: 1345px;
+          box-sizing: border-box;
+          border-radius: 20px;
+          margin-top: auto;
+          transition: background 0.3s ease-in-out;
+}
