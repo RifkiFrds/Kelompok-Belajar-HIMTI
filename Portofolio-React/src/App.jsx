@@ -1,11 +1,17 @@
 import React from 'react'
+import HeroSection from './components/Molecules/HeroSection'
+import Card from './components/Molecules/Card'
+import Theme from './components/Atoms/Theme'
+import ButtonPrimary from './components/Atoms/ButtonPrimary'
 
 function App() {
   return (
-    <div class="glass">
-       <h1 class="text-3xl font-bold underline flex justify-center ">
-    Hello world!
-  </h1>
+    <div className="min-h-screen bg-base-100 flex flex-col items-center gap-8 p-8">
+      <h1 className="text-4xl font-bold mb-4">Portofolio React - Satu Halaman</h1>
+      <Theme />
+      <HeroSection />
+      <Card />
+      <ButtonPrimary> Klik Saya </ButtonPrimary>
     </div>
   )
 }
